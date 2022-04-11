@@ -3,19 +3,19 @@
 import datetime
 import locale
 import yagmail
-from credentials import SENDER_MAIL
-from credentials import SENDER_PSWD
-from credentials import RECEIPIENTS_MAIL
-from credentials import COMPANY_NAME
-from credentials import COMPANY_CNPJ
+from config import SENDER_MAIL
+from config import SENDER_PSWD
+from config import RECEIPIENTS_MAIL
+from config import COMPANY_NAME
+from config import COMPANY_CNPJ
 
 
 if __name__ == "__main__":
 
-    # Setting the locale to BR Portuguese.
+    # Setting the locale to Brazilian Portuguese.
     locale.setlocale(locale.LC_ALL, "pt_BR.UTF-8")
 
-    # Defining mail params.
+    # Defining mail config params.
     FROM_ = SENDER_MAIL
     TO = RECEIPIENTS_MAIL
     REFERENCE_DATE = datetime.datetime.now().strftime("%B-%Y")
