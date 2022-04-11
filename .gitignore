@@ -1,0 +1,14 @@
+*/*/__pycache__
+*/__pycache__
+*/*.pyc
+__pycache__
+*/.ipynb_checkpoints
+*/*.ipynb_checkpoints
+*.egg-info
+*/*.egg-info
+*.dist-info
+.vscode
+.send_mail_old.py
+/notebooks
+credentials.json
+credentials.py
