@@ -12,3 +12,4 @@ __pycache__
 /notebooks
 credentials.json
 credentials.py
+/config.py

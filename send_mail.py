@@ -3,8 +3,10 @@
 import datetime
 import locale
 import yagmail
+# from list_files import list_files
 from config import SENDER_MAIL
 from config import SENDER_PSWD
+from config import SENDER_NAME
 from config import RECEIPIENTS_MAIL
 from config import COMPANY_NAME
 from config import COMPANY_CNPJ
@@ -20,8 +22,8 @@ if __name__ == "__main__":
     TO = RECEIPIENTS_MAIL
     REFERENCE_DATE = datetime.datetime.now().strftime("%B-%Y")
     SUBJECT = f"NF-es {COMPANY_NAME} - {COMPANY_CNPJ} - {REFERENCE_DATE}"
-    BODY = "Anexo: NF-es"
-    FILE_NAMES = ["test0.txt", "test1.txt"]
+    BODY = f"Anexo NF-es emitidas e/ou canceladas no mês de {REFERENCE_DATE}.\n\nAtt,\n\n— {SENDER_NAME}"
+    FILE_NAMES = ['test0.txt', 'test1.txt']
 
     # Accessing the mail server.
     yag = yagmail.SMTP(FROM_, password=SENDER_PSWD)
